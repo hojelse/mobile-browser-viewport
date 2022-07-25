@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  </script>
+</head>
+<body>
+  <section class="box">
+    
+  </section>
+</body>
+<style>
+body {
+  margin: 0;
+}
+
+.box {
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+
+  background-color: hsl(0, 0%, 60%);
+  border-radius: 10%;
+}
+
+</style>
+</html>
